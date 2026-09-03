@@ -1,0 +1,110 @@
+.ar-body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+}
+
+.ar-stage {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  background: #000;
+  touch-action: none;
+}
+
+.ar-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ar-sticker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 46%;
+  max-width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  cursor: grab;
+  user-select: none;
+  -webkit-user-drag: none;
+  transform: translate(-50%, -50%) scale(0.9);
+  transform-origin: center;
+  touch-action: none;
+}
+
+.ar-sticker:active {
+  cursor: grabbing;
+}
+
+.ar-permission {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(30, 27, 24, 0.92);
+}
+
+.ar-permission__text {
+  color: var(--ink);
+  max-width: 22rem;
+  font-size: 0.95rem;
+}
+
+.ar-permission__btn {
+  background: var(--olive);
+  color: #14150f;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.ar-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.2rem;
+  background: var(--bg-raised);
+  border-top: 1px solid var(--line);
+}
+
+.ar-controls__back {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.ar-controls__size {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--ink-muted);
+  font-size: 0.85rem;
+}
+
+.ar-note {
+  margin: 0;
+  padding: 0.6rem 1.2rem 1rem;
+  background: var(--bg-raised);
+  color: var(--ink-muted);
+  font-size: 0.75rem;
+  text-align: center;
+}
